@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <meta http-equiv="content-Type" content="tex/html; charset=UTF-8">
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript">
+      $(document).ready(inicio)
+      function inicio(){
+      $("select").change(cambiacss);
+      }
+      function cambiacss() {
+      var	plantilla = $("select").attr("value");
+      $("plantilla").html('<link rel="stylesheet" type="text/css" href="css/'+plantilla+'.css">');
+      }
+    </script>
+    <link rel="stylesheet" type="text/css" href="css/base.css">
+    <plantilla>
+      <link rel="stylesheet" type="text/css" href="css/pc.css">
+    </plantilla>
+  </head>
+  <body>
+    <select name="plantilla">
+      <option value="">Selecciona la plantilla</option>
+      <option value="pc">Plantilla para pc</option>
+      <option value="pchd">Plantilla alta definicion</option>
+      <option value="tablet">Plantilla para tablet</option>
+      <option value="movil">Plantilla para movil</option>
+    </select>
+    <div id="contenedor">
+      <header>
+        <div id="titulo"></div>
+        <div id="logo"></div>
+        <div>
+          <h1>Jose Vicente</h1>
+          <h2>Eslogan de la web</h2>
+        </div>
+        <div style="clear:both;"></div>
+        <nav>
+          <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="productos.html">productos</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+          </ul>
+        </nav>
+        <div style="clear:both;"></div>
+      </header>
+      <section>
+        <div id="contieneportafolio">
+          <div id="contieneportafoliointerior">
+            <article class="artportafolio">
+              <h3>Titulo del proyecto</h3>
+              <p>Breve descripcion</p>
+              <div id="portafolio1" class="imagenportafolio"></div>
+            </article>
+          </div>
+          <div id="contieneportafoliointerior">
+            <article class="artportafolio">
+              <h3>Titulo del proyecto</h3>
+              <p>Breve descripcion</p>
+              <div id="portafolio2" class="imagenportafolio"></div>
+            </article>
+          </div>
+          <div id="contieneportafoliointerior">
+            <article class="artportafolio">
+              <h3>Titulo del proyecto</h3>
+              <p>Breve descripcion</p>
+              <div id="portafolio3" class="imagenportafolio"></div>
+            </article>
+          </div>
+          <div id="contieneportafoliointerior">
+            <article class="artportafolio">
+              <h3>Titulo del proyecto</h3>
+              <p>Breve descripcion</p>
+              <div id="portafolio4" class="imagenportafolio"></div>
+            </article>
+          </div>
+          <div style="clear:both;"></div>
+        </div>
+      </section>
+      <footer>Pie de pagina</footer>
+    </div>
+  </body>
+</html>

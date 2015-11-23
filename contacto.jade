@@ -1,0 +1,54 @@
+doctype html
+html
+  head
+    title
+    meta(http-equiv='content-Type', content='tex/html; charset=UTF-8')
+    script(type='text/javascript', src='js/jquery.js')
+    script(type='text/javascript').
+      $(document).ready(inicio)
+      function inicio(){
+      $("select").change(cambiacss);
+      }
+      function cambiacss() {
+      var	plantilla = $("select").attr("value");
+      $("plantilla").html('<link rel="stylesheet" type="text/css" href="css/'+plantilla+'.css">');
+      }
+    link(rel='stylesheet', type='text/css', href='css/base.css')
+    plantilla
+      link(rel='stylesheet', type='text/css', href='css/movil.css')
+  body
+    select(name='plantilla')
+      option(value='') Selecciona la plantilla
+      option(value='pc') Plantilla para pc
+      option(value='pchd') Plantilla alta definicion
+      option(value='tablet') Plantilla para tablet
+      option(value='movil') Plantilla para movil
+    #contenedor
+      header
+        #titulo
+        #logo
+        div
+          h1 Jose Vicente
+          h2 Eslogan de la web
+        div(style='clear:both;')
+        nav
+          ul
+            li: a(href='index.html') Inicio
+            li: a(href='blog.html') Blog
+            li: a(href='productos.html') productos
+            li: a(href='contacto.html') Contacto
+        div(style='clear:both;')
+      section
+        #contieneformulario
+          h3 Formulario de contacto
+          p Si desea ponerse en contacto conmigo, rellene este formulario:
+          form(method='POST', action='procesaformulario.php')
+            .formleyenda Nombre:
+            input#nombre(type='text', name='nombre')
+            .formleyenda Correo electronico:
+            input#email(type='text', name='email')
+            .formleyenda Mensaje:
+            textarea(name='mensaje')
+            input(type='submit', value='Enviar')
+      div(style='clear:both;')
+      footer Pie de pagina

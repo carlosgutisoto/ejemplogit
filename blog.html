@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <meta http-equiv="content-Type" content="tex/html; charset=UTF-8">
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript">
+      $(document).ready(inicio)
+      function inicio(){
+      $("select").change(cambiacss);
+      }
+      function cambiacss() {
+      var	plantilla = $("select").attr("value");
+      $("plantilla").html('<link rel="stylesheet" type="text/css" href="css/'+plantilla+'.css">');
+      }
+    </script>
+    <link rel="stylesheet" type="text/css" href="css/base.css">
+    <plantilla>
+      <link rel="stylesheet" type="text/css" href="css/pc.css">
+    </plantilla>
+  </head>
+  <body>
+    <select name="plantilla">
+      <option value="">Selecciona la plantilla</option>
+      <option value="pc">Plantilla para pc</option>
+      <option value="pchd">Plantilla alta definicion</option>
+      <option value="tablet">Plantilla para tablet</option>
+      <option value="movil">Plantilla para movil</option>
+    </select>
+    <div id="contenedor">
+      <header>
+        <div id="titulo"></div>
+        <div id="logo"></div>
+        <div>
+          <h1>Jose Vicente</h1>
+          <h2>Eslogan de la web</h2>
+        </div>
+        <div style="clear:both;"></div>
+        <nav>
+          <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="productos.html">productos</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+          </ul>
+        </nav>
+        <div style="clear:both;"></div>
+      </header>
+      <section>
+        <div id="contieneblog">
+          <div id="articulos">
+            <article contenteditable="true">
+              <h3>titulo del articulo</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui aperiam temporibus quis magnam obcaecati deleniti amet, sed nam necessitatibus quod cumque repellendus eligendi? Officiis architecto, praesentium ipsam quidem facere nobis!</p>
+              <div id="imgblog1" class="imagenarticuloblog"></div>
+            </article>
+            <article contenteditable="true">
+              <h3>titulo del articulo</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui aperiam temporibus quis magnam obcaecati deleniti amet, sed nam necessitatibus quod cumque repellendus eligendi? Officiis architecto, praesentium ipsam quidem facere nobis!</p>
+              <div id="imgblog2" class="imagenarticuloblog"></div>
+            </article>
+            <article contenteditable="true">
+              <h3>titulo del articulo</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui aperiam temporibus quis magnam obcaecati deleniti amet, sed nam necessitatibus quod cumque repellendus eligendi? Officiis architecto, praesentium ipsam quidem facere nobis!</p>
+              <div id="imgblog3" class="imagenarticuloblog"></div>
+            </article>
+            <article contenteditable="true">
+              <h3>titulo del articulo</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui aperiam temporibus quis magnam obcaecati deleniti amet, sed nam necessitatibus quod cumque repellendus eligendi? Officiis architecto, praesentium ipsam quidem facere nobis!</p>
+              <div id="imgblog3" class="imagenarticuloblog"></div>
+            </article>
+            <article contenteditable="true">
+              <h3>titulo del articulo</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui aperiam temporibus quis magnam obcaecati deleniti amet, sed nam necessitatibus quod cumque repellendus eligendi? Officiis architecto, praesentium ipsam quidem facere nobis!</p>
+              <div id="imgblog4" class="imagenarticuloblog"></div>
+            </article>
+          </div>
+          <aside>
+            <div id="arhivo">
+              <h3>Archivo</h3>
+              <ul>
+                <li><a href="">Diciembre</a></li>
+                <li><a href="">Noviembre</a></li>
+                <li><a href="">Octubre</a></li>
+                <li><a href="">Septiembre</a></li>
+                <li><a href="">Agosto</a></li>
+              </ul>
+            </div>
+            <div id="sobre">
+              <h3>sobre este blog</h3>
+              <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum assumenda nihil magni, minus dolore aliquid ratione ipsum consequatur maiores quam, eveniet iste autem at, dolor cum porro dolores corporis voluptatum?</p>
+            </div>
+          </aside>
+          <div style="clear:both;">         </div>
+        </div>
+        <div style="clear:both;"></div>
+      </section>
+      <footer>Pie de pagina</footer>
+    </div>
+  </body>
+</html>

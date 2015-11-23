@@ -1,0 +1,76 @@
+doctype html
+html
+  head
+    title
+    meta(http-equiv='content-Type', content='text/html; charset=UTF-8')    
+    script(type='text/javascript', src='js/jquery.js')    
+    script(type='text/javascript').
+      $(document).ready(inicio)
+      function inicio(){
+        $("select").change(cambiacss);
+        if(window.innerWidth < 400){
+          $("plantilla").html('<link rel="stylesheet" type="text/css" href="css/movil.css">');
+        }
+        if(window.innerWidth >= 400 && window.innerWidth < 600){
+          $("plantilla").html('<link rel="stylesheet" type="text/css" href="css/tablet.css">');
+        }
+        if(window.innerWidth >= 600 && window.innerWidth < 1200){
+          $("plantilla").html('<link rel="stylesheet" type="text/css" href="css/pc.css">');
+        }
+        if(window.innerWidth >= 1200 && window.innerWidth < 2400){
+          $("plantilla").html('<link rel="stylesheet" type="text/css" href="css/pc.css">');
+        }
+      }
+      function cambiacss() {
+      var	plantilla = $("select").attr("value");
+      $("plantilla").html('<link rel="stylesheet" type="text/css" href="css/'+plantilla+'.css">');
+      }
+    plantilla
+  body
+    select(name='plantilla')
+      option(value='') Selecciona la plantilla
+      option(value='pc') Plantilla para pc
+      option(value='pchd') Plantilla alta definicion
+      option(value='tablet') Plantilla para tablet
+      option(value='movil') Plantilla para movil
+    #contenedor
+      header
+        #titulo
+        #logo
+        div
+          h1 Jose Vicente
+          h2 Eslogan de la web
+        div(style='clear:both;')
+        nav
+          ul
+            li: a(href='index.html') Inicio
+            li: a(href='blog.html') Blog
+            li: a(href='productos.html') productos
+            li: a(href='contacto.html') Contacto
+        div(style='clear:both;')
+      section
+        #banner(contenteditable='true')
+          #contienebanner
+            h3 titulo de banner
+            p
+              |Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum atque, mollitia obcaecati alias nam vitae dolore consectetur quos nostrum sit tempore excepturi deserunt omnis. Ipsa labore ratione ea deserunt corporis!
+        article(contenteditable='true')
+          #primerarticulo.contienearticulo
+            #img1.imagendestacado
+            h3 titulo de articulo
+            p
+              |Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia ipsum incidunt et, minus ducimus, doloremque quaerat. Consectetur amet doloribus quae dolor, laboriosam, impedit, accusamus atque aperiam ab architecto hic possimus.
+        article(contenteditable='true')
+          .contienearticulo
+            #img2.imagendestacado
+            h3 titulo de articulo
+            p
+              |Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi placeat, dolore neque nemo rem mollitia sint aliquid rerum libero! Debitis molestiae eaque autem odit quasi facere voluptates fugiat commodi ipsam.
+        article(contenteditable='true')
+          #ultimoarticulo.contienearticulo
+            #img3.imagendestacado
+            h3 titulo de articulo
+            p
+              |Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat saepe dicta sit quaerat suscipit, corrupti rem ipsa, atque incidunt reprehenderit doloribus fuga libero, delectus eos veniam! Non harum, ipsam veritatis!
+      div(style='clear:both;')
+      footer Pie de pagina

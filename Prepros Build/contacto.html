@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>	
+	<meta http-equiv="content-Type" content="tex/html; charset=UTF-8">
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript">
+		$(document).ready(inicio)
+		function inicio(){
+			$("select").change(cambiacss);
+		}
+		function cambiacss() {
+			var	plantilla = $("select").attr("value");
+			$("plantilla").html('<link rel="stylesheet" type="text/css" href="css/'+plantilla+'.css">');
+		}
+	</script>
+	<link rel="stylesheet" type="text/css" href="css/base.css">
+	<plantilla>
+        <link rel="stylesheet" type="text/css" href="css/movil.css">
+    </plantilla>
+</head>
+<body>
+	<select name="plantilla">
+		<option value="">Selecciona la plantilla</option>
+		<option value="pc">Plantilla para pc</option>
+		<option value="pchd">Plantilla alta definicion</option>
+		<option value="tablet">Plantilla para tablet</option>
+		<option value="movil">Plantilla para movil</option>
+	</select>
+	<div id="contenedor">
+		<header>
+			<div id="titulo"></div>
+				<div id="logo"></div>
+				<div>
+					<h1>Jose Vicente</h1>
+					<h2>Eslogan de la web</h2>
+				</div></section><div style="clear:both;"></div>
+				<nav>
+					<ul>
+						<li><a href="index.html">Inicio</a></li>
+						<li><a href="blog.html">Blog</a></li>
+						<li><a href="productos.html">productos</a></li>
+						<li><a href="contacto.html">Contacto</a></li>
+					</ul>
+				</nav><div style="clear:both;"></div>
+		</header>
+		<section>
+            <div id="contieneformulario">
+			    <h3>Formulario de contacto</h3>
+			    <p>Si desea ponerse en contacto conmigo, rellene este formulario:</p>
+			    <form method="POST" action="procesaformulario.php">
+				    <div class="formleyenda">Nombre:</div>
+				    <input type="text" name="nombre" id="nombre">
+				    <div class="formleyenda">Correo electronico:</div>
+				    <input type="text" name="email" id="email">
+				    <div class="formleyenda">Mensaje:</div>
+				    <textarea name="mensaje"></textarea>
+				    <input type="submit" value="Enviar">				
+			    </form>
+            </div>
+		</section><div style="clear:both;"></div>
+		<footer>Pie de pagina</footer>
+	</div>
+</body>
+</html>
