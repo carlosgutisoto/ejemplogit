@@ -1,2 +1,0 @@
-# ejemplogit
-descripcion ejemplogit
